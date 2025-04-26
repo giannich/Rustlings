@@ -34,7 +34,17 @@ mod tests {
         let order_template = create_order_template();
 
         // TODO: Create your own order using the update syntax and template above!
-        // let your_order =
+        let your_order = Order {
+            // Note that String::from() inits a static string, 
+            // while the String datatype is a mutable string.
+            name: String::from("Hacker in Rust"),
+            year: 2019,
+            made_by_phone: false,
+            made_by_mobile: false,
+            made_by_email: true,
+            item_number: 123,
+            count: 1,
+        };
 
         assert_eq!(your_order.name, "Hacker in Rust");
         assert_eq!(your_order.year, order_template.year);

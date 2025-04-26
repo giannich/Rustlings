@@ -1,13 +1,27 @@
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
+    // See: https://doc.rust-lang.org/std/primitive.str.html#method.trim
+    input.trim()
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
+    // See: https://doc.rust-lang.org/std/ops/trait.Add.html
+    String::from(input) + " world!"
+
+    // See also: https://doc.rust-lang.org/std/string/struct.String.html#method.push_str
+    // Also: https://doc.rust-lang.org/reference/comments.html#non-doc-comments
+    /* Note that push_str() is just a consumer, and does not return a new string.
+     * let mut res = String::from(input);
+     * res.push_str(" world!");
+     * res
+     */
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    // See: https://doc.rust-lang.org/std/string/struct.String.html#method.replace
+    String::from(input).replace("car", "balloon")
 }
 
 fn main() {

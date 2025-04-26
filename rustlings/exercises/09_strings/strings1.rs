@@ -1,6 +1,7 @@
 // TODO: Fix the compiler error without changing the function signature.
 fn current_favorite_color() -> String {
-    "blue"
+    // This creates a new mutable string object from a string literal.
+    String::from("blue")
 }
 
 fn main() {

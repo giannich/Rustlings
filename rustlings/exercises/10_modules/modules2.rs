@@ -3,8 +3,14 @@
 
 mod delicious_snacks {
     // TODO: Add the following two `use` statements after fixing them.
-    // use self::fruits::PEAR as ???;
-    // use self::veggies::CUCUMBER as ???;
+
+    // In this case, we're keeping the fruits and veggies modules private,
+    // but we're exposing the underlying 'PEAR' and 'CUCUMBER' constants as
+    // publicly accessible items 'fruit' and 'veggie' respectively.
+    // This is mainly useful for hiding the implementation details, and only
+    // exposing the things that we want to be publicly accessible.
+    pub use self::fruits::PEAR as fruit;
+    pub use self::veggies::CUCUMBER as veggie;
 
     mod fruits {
         pub const PEAR: &str = "Pear";
